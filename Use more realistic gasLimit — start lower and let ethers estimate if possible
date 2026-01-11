@@ -1,0 +1,8 @@
+// Option A - let ethers estimate (recommended)
+const tx = await contract.buy(investment, outcome, minTokensOut, {
+  ...gasSettings,
+  // no gasLimit → ethers will estimate
+});
+
+// Option B - conservative manual
+gasLimit: 140_000   // many FPMM trades fit in 100–130k
