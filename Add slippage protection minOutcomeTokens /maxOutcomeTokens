@@ -1,3 +1,10 @@
 (Right now you use 0 → very dangerous (frontrun + sandwich), but also sometimes forces higher gas because of complex revert paths.Example (buy):is line ko paste mat karna descrption keliye hai bas ye,, code line 2 se hai )
 const expectedTokens = await contract.callStatic.calcBuyAmount(investmentAmount, 0);
 const minTokensOut = expectedTokens.mul(985).div(1000); // 1.5% slippage tolerance
+
+
+
+
+
+(Same idea for sell.// dont paste this line)
+
