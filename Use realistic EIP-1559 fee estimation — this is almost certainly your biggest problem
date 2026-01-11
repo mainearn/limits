@@ -1,0 +1,11 @@
+// Replace your current gasSettings with this
+const feeData = await provider.getFeeData();
+
+const gasSettings = {
+  maxFeePerGas: feeData.maxFeePerGas?.mul(110).div(100) || ethers.utils.parseUnits("0.05", "gwei"), // +10% safety
+  maxPriorityFeePerGas: feeData.maxPriorityFeePerGas?.mul(120).div(100) || ethers.utils.parseUnits("0.01", "gwei"),
+  gasLimit: 180_000, // ← lower than 200k is usually enough for FPMM buy/sell
+};
+
+// Then use it in tx
+const tx = await contract.buy(..., gasSettings);
