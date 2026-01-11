@@ -4,3 +4,8 @@ v5.7.2 is already quite old — newer versions have better fee estimation defaul
 
 
 npm install ethers@5.7.2@latest   # or even better → ethers@^6
+
+
+
+If you go to v6 the syntax changes a bit (but fee estimation becomes much smarter).// dont paste
+
