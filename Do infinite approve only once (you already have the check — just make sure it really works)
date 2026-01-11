@@ -1,0 +1,9 @@
+const currentAllowance = await usdc.allowance(wallet.address, marketAddress);
+const minNeeded = ethers.constants.MaxUint256; // or at least 10000e6
+
+if (currentAllowance.lt(ethers.utils.parseUnits("1000", 6))) {
+  console.log("Approving infinite...");
+  const tx = await usdc.approve(marketAddress, ethers.constants.MaxUint256);
+  await tx.wait();
+  console.log("Approval done → future trades should be cheap");
+}
