@@ -1,0 +1,6 @@
+v5.7.2 is already quite old — newer versions have better fee estimation defaults. // dont paste this line
+
+
+
+
+npm install ethers@5.7.2@latest   # or even better → ethers@^6
